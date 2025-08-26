@@ -141,5 +141,5 @@ Para replicar este proyecto o ejecutar la demo en tu máquina local, sigue estos
 
 Desarrollado por **Eduardo José Limones Contreras**.
 
--   **LinkedIn:** [Tu Perfil de LinkedIn]([https://www.linkedin.com/in/tu-usuario/](https://www.linkedin.com/in/eduardo-jos%C3%A9-limones-contreras-b1348677/))
+-   **LinkedIn:** [Tu Perfil de LinkedIn]([https://www.linkedin.com/in/tu-usuario/](https://www.linkedin.com/in/eduardo-jos%C3%A9-limones-contreras-b1348677/)
 -   **Correo:** eduardo.limones.contreras@gmail.com
