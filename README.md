@@ -25,15 +25,38 @@ El resultado final es un modelo de `RandomForestRegressor` optimizado que explic
 
 El repositorio está organizado de la siguiente manera para facilitar la reproducibilidad y comprensión del proyecto:
 
--   `01_Fuentes.ipynb`: Notebook dedicado a la carga e inspección inicial del dataset.
--   `02_LimpiezaEDA.ipynb`: Contiene todo el proceso de limpieza, análisis exploratorio de datos (EDA) y la ingeniería de características.
--   `03_Entrenamiento_Evaluacion.ipynb`: Notebook donde se entrenan, comparan y evalúan los modelos de machine learning.
--   `demo_modelo.py`: Script de la aplicación interactiva con Streamlit para probar el modelo en vivo.
--   `ai_job_dataset.csv`: El dataset original y sin procesar.
--   `salarios_codificado.csv`: El dataset limpio, transformado y listo para el modelado.
--   `mi_modelo_salarios.pkl`: El modelo final de RandomForest serializado (guardado) y listo para ser usado.
--   `requirements.txt`: Archivo con las dependencias de Python necesarias para ejecutar el proyecto.
--   `README.md`: Este archivo, con la documentación del proyecto.
+.
+├── app_streamlit/
+│   ├── demo_modelo.py              # Script de la aplicación interactiva
+│   ├── mi_modelo_salarios.pkl      # Modelo usado por la app
+│   └── salarios_codificado.csv     # Datos usados por la app
+│
+├── data/
+│   ├── procesed/
+│   │   └── salarios_codificado.csv # Dataset limpio y transformado
+│   ├── raw/
+│   │   └── ai_job_dataset.csv      # Dataset original y sin procesar
+│   ├── test/
+│   │   └── test.csv                # Conjunto de datos de prueba
+│   └── train/
+│       └── train.csv               # Conjunto de datos de entrenamiento
+│
+├── docs/
+│   └── Presentación.pdf            # Presentación final del proyecto
+│
+├── graficos/
+│   ├── feature_importance.png      # Gráfico de importancia de variables
+│   └── ...                         # Otros gráficos generados
+│
+├── models/
+│   └── mi_modelo_salarios.pkl      # Modelo final serializado
+│
+├── notebooks/
+│   ├── 01_Fuentes.ipynb            # Notebook de carga e inspección
+│   ├── 02_LimpiezaEDA.ipynb        # Notebook de limpieza y EDA
+│   └── 03_Entrenamiento_Evaluacion.ipynb # Notebook de modelado
+│
+└── README.md                       # Documentación del proyecto
 
 ## 📊 Fuente de Datos
 
