@@ -24,7 +24,7 @@ El resultado final es un modelo de `RandomForestRegressor` optimizado que explic
 ## 📁 Estructura del Repositorio
 
 El repositorio está organizado de la siguiente manera para facilitar la reproducibilidad y comprensión del proyecto:
-
+```
 .
 ├── app_streamlit/
 │   ├── demo_modelo.py
@@ -57,7 +57,7 @@ El repositorio está organizado de la siguiente manera para facilitar la reprodu
 │   └── 03_Entrenamiento_Evaluacion.ipynb
 │
 └── README.md
-
+´´´
 ## 📊 Fuente de Datos
 
 Los datos para este análisis fueron obtenidos de la plataforma Kaggle.
