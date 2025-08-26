@@ -57,7 +57,6 @@ El repositorio está organizado de la siguiente manera para facilitar la reprodu
 │   └── 03_Entrenamiento_Evaluacion.ipynb
 │
 ├── requirements.txt
-│
 └── README.md
 ```
 
