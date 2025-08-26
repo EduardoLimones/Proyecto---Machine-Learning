@@ -56,7 +56,7 @@ El repositorio está organizado de la siguiente manera para facilitar la reprodu
 │   ├── 02_LimpiezaEDA.ipynb
 │   └── 03_Entrenamiento_Evaluacion.ipynb
 │
-└── README.md
+└── README.md```
 
 ## 📊 Fuente de Datos
 
