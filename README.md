@@ -27,36 +27,36 @@ El repositorio está organizado de la siguiente manera para facilitar la reprodu
 
 .
 ├── app_streamlit/
-│   ├── demo_modelo.py              # Script de la aplicación interactiva
-│   ├── mi_modelo_salarios.pkl      # Modelo usado por la app
-│   └── salarios_codificado.csv     # Datos usados por la app
+│   ├── demo_modelo.py
+│   ├── mi_modelo_salarios.pkl
+│   └── salarios_codificado.csv
 │
 ├── data/
 │   ├── procesed/
-│   │   └── salarios_codificado.csv # Dataset limpio y transformado
+│   │   └── salarios_codificado.csv
 │   ├── raw/
-│   │   └── ai_job_dataset.csv      # Dataset original y sin procesar
+│   │   └── ai_job_dataset.csv
 │   ├── test/
-│   │   └── test.csv                # Conjunto de datos de prueba
+│   │   └── test.csv
 │   └── train/
-│       └── train.csv               # Conjunto de datos de entrenamiento
+│       └── train.csv
 │
 ├── docs/
-│   └── Presentación.pdf            # Presentación final del proyecto
+│   └── Presentación.pdf
 │
 ├── graficos/
-│   ├── feature_importance.png      # Gráfico de importancia de variables
-│   └── ...                         # Otros gráficos generados
+│   ├── feature_importance.png
+│   └── ... 
 │
 ├── models/
-│   └── mi_modelo_salarios.pkl      # Modelo final serializado
+│   └── mi_modelo_salarios.pkl
 │
 ├── notebooks/
-│   ├── 01_Fuentes.ipynb            # Notebook de carga e inspección
-│   ├── 02_LimpiezaEDA.ipynb        # Notebook de limpieza y EDA
-│   └── 03_Entrenamiento_Evaluacion.ipynb # Notebook de modelado
+│   ├── 01_Fuentes.ipynb
+│   ├── 02_LimpiezaEDA.ipynb
+│   └── 03_Entrenamiento_Evaluacion.ipynb
 │
-└── README.md                       # Documentación del proyecto
+└── README.md
 
 ## 📊 Fuente de Datos
 
