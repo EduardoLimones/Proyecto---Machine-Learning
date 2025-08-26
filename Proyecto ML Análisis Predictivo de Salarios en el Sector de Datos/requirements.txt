@@ -1,0 +1,15 @@
+# Data Manipulation & Analysis
+numpy==2.2.6
+pandas==2.3.0
+
+# Data Visualization
+matplotlib==3.10.3
+seaborn==0.13.2
+
+# Machine Learning Models
+scikit-learn==1.7.0
+xgboost==3.0.2
+lightgbm==4.6.0
+
+# Web Application
+streamlit==1.48.1
