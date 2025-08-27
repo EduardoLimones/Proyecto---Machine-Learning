@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import numpy as np
 
-# --- Carga de Datos y Modelo (con caché para mejorar rendimiento) ---
+# Carga de Datos y Modelo
 
 @st.cache_data
 def load_data():
@@ -22,15 +22,14 @@ def load_model():
 df_final = load_data()
 model = load_model()
 
-# Extraer listas de columnas para los selectores (nombres originales en inglés)
+# Extraer listas de columnas para los selectores
 paises_original = [col.replace('loc_', '') for col in df_final.columns if 'loc_' in col]
 industrias_original = [col.replace('industry_', '') for col in df_final.columns if 'industry_' in col]
 tipos_empleo = [col.replace('employment_type_', '') for col in df_final.columns if 'employment_type_' in col]
 puestos = [col.replace('job_title_', '') for col in df_final.columns if 'job_title_' in col]
 skills = [col.replace('skill_', '').replace('_', ' ') for col in df_final.columns if 'skill_' in col]
 
-# --- DICCIONARIOS DE TRADUCCIÓN ---
-
+# DICCIONARIOS DE TRADUCCIÓN
 # Mapeos para mostrar etiquetas amigables en español
 exp_map_es = {0: 'Junior (EN)', 1: 'Intermedio (MI)', 2: 'Senior (SE)', 3: 'Ejecutivo (EX)'}
 edu_map_es = {0: 'Técnico / Asociado', 1: 'Grado / Licenciatura', 2: 'Máster', 3: 'Doctorado (PhD)'}
@@ -55,12 +54,12 @@ industry_map = {
 industry_map_rev = {v: k for k, v in industry_map.items()}
 
 
-# --- Interfaz de Usuario (UI) ---
+# Interfaz de Usuario
 
 st.title("Demo del Modelo Predictivo de Salarios")
 st.markdown("Introduce los detalles de una oferta de empleo para obtener una estimación salarial en el mercado europeo.")
 
-# --- Barra Lateral para Inputs del Usuario ---
+# Barra Lateral para Inputs del Usuario
 st.sidebar.header("Parámetros del Puesto")
 
 # Selectores con opciones en español
@@ -90,8 +89,8 @@ st.sidebar.divider()
 
 selected_skills = st.sidebar.multiselect('Habilidades Requeridas (Top 20)', skills, default=['Python', 'SQL', 'TensorFlow'])
 
-# --- Lógica de Predicción ---
-# Crear un diccionario con todas las columnas y valores por defecto (0 o False)
+# Lógica de Predicción
+# Crear un diccionario con todas las columnas y valores por defecto
 input_data = {col: 0 for col in df_final.drop(columns=['salary_EUR']).columns}
 
 # Actualizar con los valores del usuario
@@ -103,7 +102,7 @@ input_data['remote_ratio'] = remote_ratio
 input_data['benefits_score'] = benefits_score
 input_data['is_international'] = int(is_international)
 
-# Actualizar columnas One-Hot (usando las claves originales en inglés)
+# Actualizar columnas One-Hot 
 if f'loc_{comp_loc}' in input_data:
     input_data[f'loc_{comp_loc}'] = 1
 if f'industry_{industry}' in input_data:
@@ -126,11 +125,11 @@ input_df = input_df[df_final.drop(columns=['salary_EUR']).columns] # Asegurar or
 # Realizar la predicción automáticamente al cambiar un widget
 prediction = model.predict(input_df)[0]
 
-# --- Mostrar el Resultado Principal ---
+# Mostrar el Resultado Principal
 st.header("Resultado de la Predicción")
 st.metric(label="Salario Anual Bruto Estimado en Europa", value=f"€ {prediction:,.2f}")
 
-# El bloque 'with' empieza aquí. Lo que esté DENTRO debe llevar sangría.
+
 with st.expander("Ver los datos de entrada utilizados para la predicción"):
     # Lista de etiquetas para las características seleccionadas
     labels = [
@@ -140,7 +139,7 @@ with st.expander("Ver los datos de entrada utilizados para la predicción"):
         "Puntuación de Beneficios", "Contrato Internacional", "Habilidades"
     ]
     
-    # Lista de los valores seleccionados por el usuario (en español)
+    # Lista de los valores seleccionados por el usuario
     values = [
         exp_map_es[exp_level], years_exp, edu_map_es[edu_level],
         size_map_es[comp_size], comp_loc_es, industry_es,
