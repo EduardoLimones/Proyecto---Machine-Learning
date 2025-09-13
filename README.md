@@ -123,8 +123,8 @@ Para replicar este proyecto o ejecutar la demo en tu máquina local, sigue estos
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/tu-usuario/nombre-del-repositorio.git](https://github.com/tu-usuario/nombre-del-repositorio.git)
-    cd nombre-del-repositorio
+    git clone https://github.com/EduardoLimones/Proyecto---Machine-Learning.git
+    cd Proyecto---Machine-Learning
     ```
 
 2.  **Crear un entorno virtual (recomendado):**
